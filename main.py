@@ -1,12 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
-from pyurlx import shorten
+from pyurlx import tools
 
 def shorten_link():
     long_url = entry_long_url.get()
 
     try:
-        short_url = shorten.shorten(long_url)
+        short_url = tools.shorten(long_url)
         entry_short_url.delete(0, tk.END)
         entry_short_url.insert(0, short_url)
         
